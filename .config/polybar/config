@@ -1,0 +1,83 @@
+[bar/bar]
+monitor = HDMI-2
+override-redirect = false
+bottom = false
+border-size = 3.5
+radius = 6,5
+width = 100%
+height = 26
+foreground = #7c818c
+background = #cc000000
+font-0 = SourceSans3:size=10;2
+font-1 = Font Awesome 5 Free:pixelsize=10;2
+font-2 = Font Awesome 5 Free Solid:pixelsize=10;2
+font-3 = Font Awesome 5 Brands:pixelsize=10;2
+padding-left = 1
+padding-right = 2
+module-margin-right = 2
+modules-left = i3
+modules-center = date
+modules-right = power
+
+[module/power]
+type = custom/text
+content = 
+click-left = sh ~/.config/rofi/applets/applets/powermenu.sh
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %a, %d.%m.%Y
+time = %H:%M
+format = <label>
+label = %time% %date%
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+strip-wsnumbers = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;?
+ws-icon-7 = 8;?
+ws-icon-8 = 9;?
+ws-icon-9 = 10;
+ws-icon-default = ♟
+format = <label-state>
+label-focused = %index% %icon%
+label-focused-foreground = #5294e2
+label-focused-background = #404552
+label-focused-underline = #f70217 
+label-focused-underline-size = 2
+label-focused-padding = 1,5
+label-unfocused = %index% %icon%
+label-unfocused-foreground = #4b5162
+label-unfocused-padding = 1,5
+label-visible = %index% %icon%
+label-visible-underline = #404552
+label-visible-padding = 1,5
+label-urgent = %index% %icon%
+label-urgent-foreground = #7c818c
+label-urgent-background = #5294e2
+
+[bar/tv]
+monitor = HDMI-1
+border-size = 3,5
+radius = 6,5
+width = 100%
+height = 26
+padding-right = 1
+foreground = #7c818c
+background = #cc000000
+font-0 = SourceSans3:size=10;2
+font-1 = Font Awesome 5 Free:pixelsize=10;2
+font-2 = Font Awesome 5 Free Solid:pixelsize=10;2
+font-3 = Font Awesome 5 Brands:pixelsize=10;2
+modules-right = i3
